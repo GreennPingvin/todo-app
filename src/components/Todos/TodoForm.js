@@ -12,14 +12,16 @@ export default function TodoForm() {
   }
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Enter new tod"
-        onChange={onInputChange}
-      />
-      <button type="submit" onClick={onButtonClick}>
-        Submit
-      </button>
+      <form>
+        <input
+          type="text"
+          placeholder="Enter new todo"
+          onChange={onInputChange}
+        />
+        <button type="submit" onClick={onButtonClick}>
+          Submit
+        </button>
+      </form>
       <TodoList todoList={todoList} />
     </div>
   )
