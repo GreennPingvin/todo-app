@@ -8,11 +8,14 @@ function App() {
   function addTodoHandler(text) {
     setTodoList([...todoList, text])
   }
+  function deleteTodoHandler(index) {
+    setTodoList(todoList.filter((_, i) => i !== index))
+  }
   return (
     <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} />
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} deleteTodo={deleteTodoHandler} />
     </div>
   )
 }
