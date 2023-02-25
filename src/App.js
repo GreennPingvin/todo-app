@@ -4,22 +4,14 @@ import TodoForm from './components/Todos/TodoForm'
 import TodoList from './components/Todos/TodoList'
 
 function App() {
-  const [inputText, setInputText] = useState('')
   const [todoList, setTodoList] = useState([])
-  function onInputChange(e) {
-    setInputText(e.target.value)
-  }
-  function onButtonClick(e) {
-    e.preventDefault()
-    setTodoList([...todoList, { text: inputText }])
+  function addTodoHandler(text) {
+    setTodoList([...todoList, text])
   }
   return (
     <div className="App">
       <h1>Todo App</h1>
-      <TodoForm
-        onClick={onButtonClick}
-        onInputChange={onInputChange}
-      />
+      <TodoForm addTodo={addTodoHandler} />
       <TodoList todoList={todoList} />
     </div>
   )
