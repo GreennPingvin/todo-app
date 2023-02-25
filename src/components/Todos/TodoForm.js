@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import styles from './TodoForm.module.css'
 
 export default function TodoForm(props) {
   const { addTodo } = props
@@ -10,7 +11,7 @@ export default function TodoForm(props) {
     setText('')
   }
   return (
-    <div>
+    <div className={styles.todoFormContainer}>
       <form onSubmit={onSubmitHandler}>
         <input
           type="text"
