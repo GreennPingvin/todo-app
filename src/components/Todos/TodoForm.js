@@ -7,6 +7,7 @@ export default function TodoForm(props) {
   const onSubmitHandler = (e) => {
     e.preventDefault()
     addTodo(text)
+    setText('')
   }
   return (
     <div>
@@ -14,6 +15,7 @@ export default function TodoForm(props) {
         <input
           type="text"
           placeholder="Enter new todo"
+          value={text}
           onChange={(e) => setText(e.target.value)}
         />
         <button type="submit">Submit</button>

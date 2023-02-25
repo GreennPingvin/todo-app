@@ -2,7 +2,7 @@ export default function Todo(props) {
   const { todo } = props
   return (
     <>
-      <p>{todo}</p>
+      <h2>{todo}</h2>
     </>
   )
 }
