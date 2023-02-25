@@ -6,13 +6,8 @@ export default function TodoList(props) {
   return (
     <div className={styles.todoListContainer}>
       {!todoList.length && <h2>Todo list is empty</h2>}
-      {todoList.map((todo, i) => (
-        <Todo
-          id={todo.id}
-          todo={todo}
-          key={i}
-          onDoubleClick={deleteTodo}
-        />
+      {todoList.map((todo) => (
+        <Todo todo={todo} key={todo.id} onDoubleClick={deleteTodo} />
       ))}
     </div>
   )
