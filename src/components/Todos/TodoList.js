@@ -8,9 +8,10 @@ export default function TodoList(props) {
       {!todoList.length && <h2>Todo list is empty</h2>}
       {todoList.map((todo, i) => (
         <Todo
+          id={todo.id}
           todo={todo}
           key={i}
-          onDoubleClick={() => deleteTodo(i)}
+          onDoubleClick={deleteTodo}
         />
       ))}
     </div>
