@@ -1,8 +1,8 @@
 export default function Todo(props) {
-  const { text } = props
+  const { todo } = props
   return (
     <>
-      <p>{text}</p>
+      <p>{todo.text}</p>
     </>
   )
 }
