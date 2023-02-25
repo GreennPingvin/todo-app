@@ -54,12 +54,12 @@ function App() {
         deleteTodo={deleteTodoHandler}
         toggleTodo={toggleTodoHandler}
       />
-      {completedTodosCount > 0 &&
-        (completedTodosCount === 1 ? (
-          <h2>You have completed 1 todo</h2>
-        ) : (
-          <h2>You have completed {completedTodosCount} todos</h2>
-        ))}
+      {completedTodosCount > 0 && (
+        <h2>
+          You have completed {completedTodosCount}
+          {completedTodosCount === 1 ? ' todo' : ' todos'}
+        </h2>
+      )}
     </div>
   )
 }
