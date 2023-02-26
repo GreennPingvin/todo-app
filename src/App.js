@@ -5,6 +5,7 @@ import TodoForm from './components/Todos/TodoForm'
 import TodoList from './components/Todos/TodoList'
 import TodosActions from './components/Todos/TodosActions'
 
+//some comment
 function App() {
   const [todoList, setTodoList] = useState([])
   function addTodoHandler(text) {
